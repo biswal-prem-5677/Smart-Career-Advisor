@@ -31,3 +31,21 @@ def extract_skills_ner(text):
         
     except Exception as e:
         raise RuntimeError(f"spaCy NER extraction failed: {str(e)}")
+
+def extract_name_ner(text):
+    """Extracts the first PERSON entity found in the text (assumed to be the candidate's name)."""
+    try:
+        nlp = load_nlp()
+        if nlp is None:
+            return "Candidate"
+        
+        # Limit to the first 1000 chars as names appear at the top
+        doc = nlp(text[:1000])
+        for ent in doc.ents:
+             if ent.label_ == "PERSON":
+                 # Filter out single words if possible, or just take the first one
+                 if len(ent.text.split()) >= 1: 
+                     return ent.text.strip().title()
+        return "Candidate"
+    except Exception:
+        return "Candidate"

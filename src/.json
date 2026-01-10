@@ -1,0 +1,114 @@
+{
+    "machine_learning_jobs": [
+        {
+            "domain": "Machine Learning Engineering",
+            "roles": [
+                {
+                    "job_title": "Machine Learning Engineer",
+                    "company": "Google DeepMind",
+                    "location": "Mountain View, CA / Remote",
+                    "package": "$180k - $320k + Equity",
+                    "description": "Build and deploy ML models for prediction, analytics, and automation. You will work on massive scale neural networks.",
+                    "how_to_get": "1. Master Python & PyTorch/TensorFlow.\n2. Build end-to-end ML projects.\n3. Understand System Design for ML.\n4. Apply via company portal.",
+                    "apply_link": "https://careers.google.com/jobs/results/?q=Machine%20Learning"
+                },
+                {
+                    "job_title": "MLOps Engineer",
+                    "company": "Netflix",
+                    "location": "Los Gatos, CA",
+                    "package": "$250k - $450k (All Cash)",
+                    "description": "Automate model deployment, monitoring, and lifecycle management. Focus on CI/CD for Machine Learning pipelines.",
+                    "how_to_get": "1. Learn Docker & Kubernetes.\n2. Master tools like MLflow, Kubeflow, or TFX.\n3. Gain experience with AWS/GCP cloud infra.",
+                    "apply_link": "https://jobs.netflix.com/search?q=MLOps"
+                },
+                {
+                    "job_title": "AI Platform Engineer",
+                    "company": "Uber",
+                    "location": "San Francisco, CA",
+                    "package": "$160k - $240k + RSU",
+                    "description": "Develop internal ML platforms (Michelangelo) and tooling for model training and serving at scale.",
+                    "how_to_get": "1. Strong Software Engineering background (Java/Go/Python).\n2. Experience building distributed systems.\n3. Knowledge of Spark/Hadoop.",
+                    "apply_link": "https://www.uber.com/us/en/careers/list/?location=San%20Francisco%2C%20CA&department=Engineering"
+                },
+                {
+                    "job_title": "Model Deployment Engineer",
+                    "company": "Anthropic",
+                    "location": "San Francisco, CA",
+                    "package": "$220k - $380k",
+                    "description": "Deploy large language models on cloud environments with high availability and low latency.",
+                    "how_to_get": "1. Deep understanding of LLM inference (vLLM, TGI).\n2. CUDA optimization skills.\n3. High-performance Python/C++.",
+                    "apply_link": "https://boards.greenhouse.io/anthropic"
+                }
+            ]
+        },
+        {
+            "domain": "Data Science",
+            "roles": [
+                {
+                    "job_title": "Data Scientist",
+                    "company": "Meta (Facebook)",
+                    "location": "Menlo Park, CA",
+                    "package": "$170k - $280k",
+                    "description": "Use machine learning and statistics to deliver insights, drive product direction, and support decision making.",
+                    "how_to_get": "1. Strong Stats & Probability foundation.\n2. SQL Mastery is mandatory.\n3. Product Sense & A/B Testing intuition.",
+                    "apply_link": "https://www.metacareers.com/jobs/?q=Data%20Scientist"
+                },
+                {
+                    "job_title": "Data Analyst",
+                    "company": "Amazon",
+                    "location": "Seattle, WA",
+                    "package": "$110k - $160k",
+                    "description": "Analyze datasets, generate visuals, dashboards, and reports for business supply chain teams.",
+                    "how_to_get": "1. Excel & SQL proficiency.\n2. Tableau/PowerBI for visualization.\n3. Strong communication skills.",
+                    "apply_link": "https://www.amazon.jobs/en/search?base_query=Data+Analyst"
+                },
+                {
+                    "job_title": "Research Data Scientist",
+                    "company": "Spotify",
+                    "location": "New York, NY",
+                    "package": "$150k - $220k",
+                    "description": "Work on analytical research, forecasting, and modeling for personalized recommendation algorithms.",
+                    "how_to_get": "1. PhD or Masters in Quantitative field.\n2. Experience with Causal Inference.\n3. Python/R expertise.",
+                    "apply_link": "https://www.lifeatspotify.com/jobs?q=Data%20Scientist"
+                }
+            ]
+        },
+        {
+            "domain": "Natural Language Processing (NLP)",
+            "roles": [
+                {
+                    "job_title": "NLP Engineer",
+                    "company": "OpenAI",
+                    "location": "San Francisco, CA",
+                    "package": "$300k - $550k (+ PPUs)",
+                    "description": "Build next-gen models for text classification, chatbots, sentiment analysis, and summarization.",
+                    "how_to_get": "1. Published research in NLP conferences.\n2. Deep understanding of Transformers.\n3. Experience training large models.",
+                    "apply_link": "https://openai.com/careers"
+                },
+                {
+                    "job_title": "Prompt Engineer",
+                    "company": "Scale AI",
+                    "location": "Remote",
+                    "package": "$120k - $180k",
+                    "description": "Optimize prompts and chains for LLM-based applications and workflows to ensure high quality outputs.",
+                    "how_to_get": "1. Extensive experimentation with GPT-4/Claude.\n2. Understanding of chain-of-thought reasoning.\n3. Basic scripting skills.",
+                    "apply_link": "https://scale.com/careers"
+                }
+            ]
+        },
+        {
+            "domain": "Computer Vision",
+            "roles": [
+                {
+                    "job_title": "Computer Vision Engineer",
+                    "company": "Tesla",
+                    "location": "Palo Alto, CA",
+                    "package": "$160k - $300k",
+                    "description": "Develop models for image recognition, object detection, and video analytics for Autopilot.",
+                    "how_to_get": "1. Strong C++ skills.\n2. Experience with Real-time inference.\n3. Knowledge of SLAM and 3D Geometry.",
+                    "apply_link": "https://www.tesla.com/careers/search/?query=Computer%20Vision"
+                }
+            ]
+        }
+    ]
+}

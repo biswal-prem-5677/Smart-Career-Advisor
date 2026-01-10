@@ -1,41 +1,47 @@
-from langchain_community.llms import OpenAI
-from langchain.prompts import PromptTemplate
-import os
-import streamlit as st
-from dotenv import load_dotenv
-
-load_dotenv()
-
-def generate_project_ideas(resume_text, skills):
-    # Get API key from environment or Streamlit secrets
-    openai_api_key = os.getenv('OPENAI_API_KEY')
-    if not openai_api_key:
-        try:
-            openai_api_key = st.secrets["OPENAI_API_KEY"]
-        except:
-            st.error("⚠️ OpenAI API key not found. Please set OPENAI_API_KEY in environment variables or Streamlit secrets.")
-            return "OpenAI API key not configured. Please contact the administrator."
+def generate_project_ideas(resume_text, resume_skills):
+    """
+    Generates project ideas based on skills using pre-defined templates.
+    Fast, logic-based, no AI dependencies.
+    """
     
-    if not openai_api_key:
-        return "OpenAI API key not available. Please configure your API key to use this feature."
+    ideas = []
+    ideas.append("### 💡 Recommended Portfolio Projects")
+    ideas.append("Building these projects will demonstrate your expertise in your key skills:\n")
     
-    try:
-        prompt = PromptTemplate(
-            input_variables=["resume", "skills"],
-            template=(
-                "Based on the following resume and skills, suggest 3 impactful project topics and descriptions which tackle real life problems (not limited to AI/ML) that align with the candidate's background and would impress recruiters in their field.\n"
-                "Resume:\n{resume}\n"
-                "Skills:\n{skills}\n"
-                "Project Ideas:"
-            )
-        )
-        llm = OpenAI(temperature=0.5, openai_api_key=openai_api_key)
-        return llm(
-            prompt.format(
-                resume=resume_text,
-                skills=", ".join(skills)
-            )
-        )
-    except Exception as e:
-        st.error(f"Error generating project ideas: {str(e)}")
-        return "Unable to generate project ideas at this time. Please try again later."
+    # Simple rule-based mapping
+    skill_projects = {
+        'python': [
+            "**Data Analysis Dashboard**: Build a Streamlit app that visualizes a public dataset (e.g., Kaggle) using Pandas and Plotly.",
+            "**Automation Script**: Write a script to automate a daily task (e.g., file organizer, email sender) and document it on GitHub."
+        ],
+        'react': [
+            "**E-commerce UI**: Create a responsive shopping cart interface with state management (Redux/Context API).",
+            "**Task Tracker**: Build a Trello-like Kanban board with drag-and-drop functionality."
+        ],
+        'sql': [
+            "**Inventory Management System**: Design a normalized database schema and write complex queries for reporting.",
+        ],
+        'machine learning': [
+            "**Predictive Model**: Train a model on the Titanic dataset to predict survival rates and deploy it via an API.",
+        ],
+        'javascript': [
+            "**Weather App**: Fetch real-time data from a public API and display it dynamically.",
+        ]
+    }
+    
+    found_ideas = False
+    for skill in resume_skills:
+        lower_skill = skill.lower()
+        if lower_skill in skill_projects:
+            found_ideas = True
+            ideas.append(f"#### Since you know {skill.capitalize()}:")
+            for project in skill_projects[lower_skill]:
+                ideas.append(f"- {project}")
+            ideas.append("")
+            
+    if not found_ideas:
+        ideas.append("#### General Full-Stack Project")
+        ideas.append("- **Blog Platform**: Build a CRUD application with authentication and a database.")
+        ideas.append("- **Portfolio Website**: Design a personal site to showcase your resume and projects.")
+
+    return "\n".join(ideas)

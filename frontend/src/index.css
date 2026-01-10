@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+
+
+@theme {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --color-primary: #6366f1;
+    --color-primary-dark: #4f46e5;
+    --color-secondary: #ec4899;
+    --color-dark-bg: #0f172a;
+    --color-card-bg: rgba(255, 255, 255, 0.9);
+}
+
+:root {
+    --bg-light: #f8fafc;
+    --bg-dark: #0f172a;
+    --text-light: #1e293b;
+    --text-dark: #f1f5f9;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-light);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+    background: var(--bg-dark);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.2) 0px, transparent 50%);
+    color: var(--text-dark);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-zoom-out {
+    animation: zoomOut 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-enter {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+@keyframes gradient-x {
+
+    0%,
+    100% {
+        background-size: 200% 200%;
+        background-position: left center;
+    }
+
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
+    }
+}
+
+.animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

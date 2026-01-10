@@ -1,44 +1,26 @@
-from langchain_community.llms import OpenAI
-from langchain.prompts import PromptTemplate
-import os
-import streamlit as st
-from dotenv import load_dotenv
-
-load_dotenv()
-
 def enhance_resume_section(resume_text, jd_text, missing_skills):
-    # Get API key from environment or Streamlit secrets
-    openai_api_key = os.getenv('OPENAI_API_KEY')
-    if not openai_api_key:
-        try:
-            openai_api_key = st.secrets["OPENAI_API_KEY"]
-        except:
-            st.error("⚠️ OpenAI API key not found. Please set OPENAI_API_KEY in environment variables or Streamlit secrets.")
-            return "OpenAI API key not configured. Please contact the administrator."
+    """
+    Generates suggestions for resume enhancement based on missing skills using templates.
+    Fast, logic-based, no AI dependencies.
+    """
     
-    if not openai_api_key:
-        return "OpenAI API key not available. Please configure your API key to use this feature."
+    suggestions = []
     
-    try:
-        prompt = PromptTemplate(
-            input_variables=["resume", "jd", "missing_skills"],
-            template=(
-                "You are a career coach AI. Given the following resume section, job description, and missing skills, "
-                "suggest improved wording for the resume section to better match the job description and address the missing skills.\n"
-                "Resume Section:\n{resume}\n"
-                "Job Description:\n{jd}\n"
-                "Missing Skills:\n{missing_skills}\n"
-                "Improved Resume Section:"
-            )
-        )
-        llm = OpenAI(temperature=0.3, openai_api_key=openai_api_key)
-        return llm(
-            prompt.format(
-                resume=resume_text,
-                jd=jd_text,
-                missing_skills=", ".join(missing_skills)
-            )
-        )
-    except Exception as e:
-        st.error(f"Error enhancing resume: {str(e)}")
-        return "Unable to generate resume improvements at this time. Please try again later."
+    suggestions.append("### 🎯 Strategic Improvements")
+    suggestions.append("Based on the job description, here are targeted actions to improve your resume:")
+    
+    if missing_skills:
+        suggestions.append("\n#### 1. Skill Integration")
+        suggestions.append(f"Your resume appears to miss: **{', '.join(missing_skills)}**.")
+        suggestions.append("- **Action**: Add a 'Technical Skills' or 'Competencies' section if you possess these skills.")
+        suggestions.append("- **Context**: For each skill, try to include a bullet point in your Experience section demonstrating how you applied it.")
+        suggestions.append(f"  *Example*: 'Leveraged **{missing_skills[0]}** to optimize workflow efficiency by 20%.'")
+    else:
+         suggestions.append("\n#### 1. Skill Validation")
+         suggestions.append("You have a strong skill match! Focus on quantifying your achievements.")
+
+    suggestions.append("\n#### 2. Section Optimization")
+    suggestions.append("- **Summary**: Ensure your professional summary includes the exact job title from the JD.")
+    suggestions.append("- **Formatting**: Use clean, consistent fonts (like Arial or Calibri) and ensure dates are right-aligned.")
+    
+    return "\n".join(suggestions)

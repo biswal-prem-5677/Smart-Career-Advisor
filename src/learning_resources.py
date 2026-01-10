@@ -213,3 +213,74 @@ def get_learning_resources(skills):
                 break
     
     return resources
+
+RELATED_SKILLS = {
+    # Programming Languages
+    'python': ['Pandas', 'NumPy', 'Django', 'Flask', 'Machine Learning'],
+    'java': ['Spring Boot', 'Hibernate', 'Microservices', 'Android Development'],
+    'javascript': ['React', 'Node.js', 'TypeScript', 'Vue.js'],
+    'typescript': ['React', 'Angular', 'Node.js', 'Next.js'],
+    'c++': ['Data Structures', 'Algorithms', 'Game Development', 'Unreal Engine'],
+    'c#': ['.NET Core', 'Unity', 'Azure', 'Xamarin'],
+    'go': ['Microservices', 'Kubernetes', 'Docker', 'gRPC'],
+    'swift': ['iOS Development', 'SwiftUI', 'Objective-C'],
+    'kotlin': ['Android Development', 'Java', 'Jetpack Compose'],
+    'php': ['Laravel', 'WordPress', 'MySQL', 'Symfony'],
+    
+    # Web Development
+    'html': ['CSS', 'JavaScript', 'React', 'Frontend Development'],
+    'css': ['HTML', 'JavaScript', 'Tailwind CSS', 'Bootstrap'],
+    'react': ['Redux', 'Next.js', 'Node.js', 'TypeScript', 'GraphQL'],
+    'node.js': ['Express.js', 'MongoDB', 'React', 'REST APIs'],
+    'angular': ['TypeScript', 'RxJS', 'NgRx', 'Node.js'],
+    'vue.js': ['Vuex', 'Nuxt.js', 'JavaScript', 'Node.js'],
+    'next.js': ['React', 'TypeScript', 'Tailwind CSS', 'Serverless'],
+    'django': ['Python', 'PostgreSQL', 'REST APIs', 'Docker'],
+    'flask': ['Python', 'SQLAlchemy', 'REST APIs', 'Docker'],
+    'spring boot': ['Java', 'Microservices', 'Hibernate', 'aws'],
+    
+    # Data & AI
+    'sql': ['PostgreSQL', 'Database Design', 'Python', 'Data Analysis'],
+    'data analysis': ['Python', 'Pandas', 'SQL', 'Tableau', 'PowerBI'],
+    'machine learning': ['Python', 'Deep Learning', 'TensorFlow', 'Scikit-learn', 'Statistics'],
+    'deep learning': ['TensorFlow', 'PyTorch', 'Neural Networks', 'Computer Vision'],
+    'computer vision': ['OpenCV', 'PyTorch', 'TensorFlow', 'Deep Learning'],
+    'nlp': ['Transformers', 'Hugging Face', 'NLTK', 'Spacy'],
+    
+    # DevOps & Cloud
+    'docker': ['Kubernetes', 'Jenkins', 'CI/CD', 'AWS'],
+    'kubernetes': ['Docker', 'Helm', 'AWS', 'Azure'],
+    'aws': ['Docker', 'Kubernetes', 'Terraform', 'Serverless'],
+    'devops': ['Docker', 'Kubernetes', 'Jenkins', 'Linux', 'AWS'],
+    'git': ['GitHub', 'GitLab', 'CI/CD', 'Command Line'],
+}
+
+def get_related_skills(skills):
+    """
+    Get recommended/related skills based on the input skills.
+    Uses simple rule-based mapping.
+    """
+    if not skills:
+        return []
+    
+    recommendations = set()
+    skill_lowercase_map = {skill.lower(): skill for skill in RELATED_SKILLS.keys()}
+    
+    for skill in skills:
+        skill_lower = skill.lower().strip()
+        
+        # Direct Match
+        if skill_lower in skill_lowercase_map:
+            key = skill_lowercase_map[skill_lower]
+            recommendations.update(RELATED_SKILLS[key])
+        
+        # Partial/Variation Match (Simple)
+        for key in RELATED_SKILLS.keys():
+            if skill_lower == key or skill_lower in key.split(): # very basic check
+                 recommendations.update(RELATED_SKILLS[key])
+                 
+    # Remove skills that are already known (in input)
+    input_lower = {s.lower().strip() for s in skills}
+    final_recs = [rec for rec in recommendations if rec.lower() not in input_lower]
+    
+    return list(final_recs)[:8] # Return top 8 unique recommendations

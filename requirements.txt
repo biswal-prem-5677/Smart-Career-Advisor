@@ -1,5 +1,6 @@
 langchain
 openai
+requests
 streamlit
 scikit-learn
 PyPDF2
@@ -12,3 +13,7 @@ pandas
 numpy
 xgboost
 joblib
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
