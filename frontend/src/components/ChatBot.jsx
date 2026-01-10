@@ -32,7 +32,7 @@ const ChatBot = () => {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/chat-analyze', formData, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/chat-analyze`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
@@ -63,7 +63,7 @@ const ChatBot = () => {
 
         try {
             // Call Backend
-            const response = await axios.post('http://localhost:8000/api/chat-query', { query: userMsg.text });
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/chat-query`, { query: userMsg.text });
 
             // Simulate typing delay for "natural" feel
             setTimeout(() => {

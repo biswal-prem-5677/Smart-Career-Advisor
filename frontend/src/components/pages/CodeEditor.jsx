@@ -16,7 +16,7 @@ const CodeEditor = () => {
 
     const fetchProblems = async () => {
         try {
-            const res = await axios.get('http://localhost:8000/api/code/problems');
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/code/problems`);
             setProblems(res.data.problems);
             if (res.data.problems.length > 0) {
                 selectProblem(res.data.problems[0]);
@@ -36,7 +36,7 @@ const CodeEditor = () => {
         setIsRunning(true);
         setOutput(null);
         try {
-            const res = await axios.post('http://localhost:8000/api/code/evaluate', {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/code/evaluate`, {
                 code,
                 language,
                 problem_id: selectedProblem.id
@@ -67,15 +67,15 @@ const CodeEditor = () => {
                             key={prob.id}
                             onClick={() => selectProblem(prob)}
                             className={`w-full text-left p-4 hover:bg-[#2a2d2e] border-l-2 transition-all ${selectedProblem?.id === prob.id
-                                    ? 'border-blue-500 bg-[#37373d] text-white'
-                                    : 'border-transparent text-slate-400'
+                                ? 'border-blue-500 bg-[#37373d] text-white'
+                                : 'border-transparent text-slate-400'
                                 }`}
                         >
                             <div className="flex justify-between items-center mb-1">
                                 <span className="font-medium text-sm">{prob.title}</span>
                                 <span className={`text-[10px] px-2 py-0.5 rounded-full ${prob.difficulty === 'Easy' ? 'bg-green-500/20 text-green-400' :
-                                        prob.difficulty === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                                            'bg-red-500/20 text-red-400'
+                                    prob.difficulty === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                                        'bg-red-500/20 text-red-400'
                                     }`}>
                                     {prob.difficulty}
                                 </span>
@@ -112,8 +112,8 @@ const CodeEditor = () => {
                             onClick={handleRun}
                             disabled={isRunning}
                             className={`flex items-center gap-2 px-4 py-1.5 rounded text-sm font-medium transition-all ${isRunning
-                                    ? 'bg-blue-600/50 cursor-wait'
-                                    : 'bg-blue-600 hover:bg-blue-500 text-white'
+                                ? 'bg-blue-600/50 cursor-wait'
+                                : 'bg-blue-600 hover:bg-blue-500 text-white'
                                 }`}
                         >
                             {isRunning ? <Cpu size={16} className="animate-spin" /> : <Play size={16} />}

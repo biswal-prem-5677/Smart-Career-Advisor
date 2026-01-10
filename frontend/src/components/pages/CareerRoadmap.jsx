@@ -11,7 +11,7 @@ const CareerRoadmap = () => {
         if (!domain) return;
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:8000/api/roadmap/generate', { domain });
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/roadmap/generate`, { domain });
             setRoadmap(res.data);
         } catch (err) {
             console.error(err);

@@ -28,7 +28,7 @@ const LoginPage = ({ onLoginSuccess }) => {
         try {
             // In a real app, you'd validate password here or on server. 
             // For this hackathon flow, we treat the first step as "Request OTP"
-            const res = await axios.post('http://localhost:8000/api/auth/send-otp', { email });
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/send-otp`, { email });
             if (res.data.success) {
                 setStep('otp');
             } else {
@@ -61,7 +61,7 @@ const LoginPage = ({ onLoginSuccess }) => {
         }
         setIsLoading(true);
         try {
-            const res = await axios.post('http://localhost:8000/api/auth/verify-otp', { email, otp: otpValue });
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/verify-otp`, { email, otp: otpValue });
             if (res.data.success) {
                 onLoginSuccess({ name: email.split('@')[0], email: email });
             } else {

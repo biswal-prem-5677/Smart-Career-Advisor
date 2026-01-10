@@ -11,7 +11,7 @@ const JobsPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/api/jobs/data');
+                const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/jobs/data`);
                 setJobsData(res.data);
             } catch (err) {
                 console.error(err);
@@ -71,8 +71,8 @@ const JobsPage = () => {
                             key={idx}
                             onClick={() => setSelectedDomain(domain)}
                             className={`px-5 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${selectedDomain === domain
-                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+                                ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
+                                : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
                                 }`}
                         >
                             {domain}
