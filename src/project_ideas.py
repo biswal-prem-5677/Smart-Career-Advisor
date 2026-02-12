@@ -1,47 +1,49 @@
+from llm_utils import get_ai_response
+
 def generate_project_ideas(resume_text, resume_skills):
     """
-    Generates project ideas based on skills using pre-defined templates.
-    Fast, logic-based, no AI dependencies.
+    Generates AI-powered project ideas based on resume context using OpenAI.
     """
     
-    ideas = []
-    ideas.append("### 💡 Recommended Portfolio Projects")
-    ideas.append("Building these projects will demonstrate your expertise in your key skills:\n")
+    prompt = f"""
+    You are a Senior Tech Career Mentor.
     
-    # Simple rule-based mapping
-    skill_projects = {
-        'python': [
-            "**Data Analysis Dashboard**: Build a Streamlit app that visualizes a public dataset (e.g., Kaggle) using Pandas and Plotly.",
-            "**Automation Script**: Write a script to automate a daily task (e.g., file organizer, email sender) and document it on GitHub."
-        ],
-        'react': [
-            "**E-commerce UI**: Create a responsive shopping cart interface with state management (Redux/Context API).",
-            "**Task Tracker**: Build a Trello-like Kanban board with drag-and-drop functionality."
-        ],
-        'sql': [
-            "**Inventory Management System**: Design a normalized database schema and write complex queries for reporting.",
-        ],
-        'machine learning': [
-            "**Predictive Model**: Train a model on the Titanic dataset to predict survival rates and deploy it via an API.",
-        ],
-        'javascript': [
-            "**Weather App**: Fetch real-time data from a public API and display it dynamically.",
-        ]
-    }
+    Candidate Skills: {', '.join(resume_skills)}
+    Resume Excerpt: "{resume_text[:1000]}..."
     
-    found_ideas = False
-    for skill in resume_skills:
-        lower_skill = skill.lower()
-        if lower_skill in skill_projects:
-            found_ideas = True
-            ideas.append(f"#### Since you know {skill.capitalize()}:")
-            for project in skill_projects[lower_skill]:
-                ideas.append(f"- {project}")
-            ideas.append("")
-            
-    if not found_ideas:
-        ideas.append("#### General Full-Stack Project")
-        ideas.append("- **Blog Platform**: Build a CRUD application with authentication and a database.")
-        ideas.append("- **Portfolio Website**: Design a personal site to showcase your resume and projects.")
+    TASK: Suggest 3 impressive "Portfolio Projects" that would make this candidate stand out to recruiters.
+    - Projects must use the candidate's existing skills but push them slightly (e.g., add Cloud or CI/CD).
+    - Avoid generic ideas like "To-Do List". Suggest "Real World" use cases.
+    - Format in Markdown.
+    
+    Output Format:
+    ### 💡 Recommended Portfolio Projects
+    
+    **1. [Project Name]**
+    *Tech Stack*: [List technologies]
+    *Description*: [Brief pitch of what it does and why it's impressive]
+    
+    **2. [Project Name]**
+    ...
+    """
+    
+    try:
+        return get_ai_response(prompt)
+    except Exception:
+        return fallback_project_ideas(resume_skills)
 
+def fallback_project_ideas(resume_skills):
+    ideas = []
+    ideas.append("### 💡 Recommended Portfolio Projects (Offline Mode)")
+    ideas.append("Building these projects will demonstrate your expertise:\n")
+    
+    # Simple rule-based logic
+    if 'python' in [s.lower() for s in resume_skills]:
+        ideas.append("- **Data Analysis Dashboard**: Build a Streamlit app that visualizes a public dataset.")
+    if 'react' in [s.lower() for s in resume_skills]:
+        ideas.append("- **E-commerce UI**: Create a responsive shopping cart interface.")
+        
+    if not ideas:
+        ideas.append("- **Portfolio Website**: Design a personal site to showcase your resume.")
+        
     return "\n".join(ideas)

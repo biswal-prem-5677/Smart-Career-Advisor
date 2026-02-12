@@ -1,0 +1,5 @@
+Jane Doe
+Software Engineer
+Skills: Python, Django, React, AWS, Docker, Machine Learning, TensorFlow
+Experience: 3 years at Tech Corp. Built a recommendation system.
+Education: BS Computer Science.

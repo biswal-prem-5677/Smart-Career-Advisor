@@ -1,0 +1,152 @@
+[
+  {
+    "company": "TCS",
+    "hr_name": "Ananya Sharma",
+    "designation": "Talent Acquisition Specialist",
+    "email": "ananya.sharma.hr@tcs-demo.com",
+    "linkedin": "https://linkedin.com/in/ananya-sharma-demo",
+    "location": "Bangalore, India",
+    "hiring_domains": ["Software Engineer", "Data Analyst", "Cloud Engineer"],
+    "notes": "Hiring for entry-level roles, prefers concise resumes."
+  },
+  {
+    "company": "Infosys",
+    "hr_name": "Rohit Verma",
+    "designation": "HR Recruiter",
+    "email": "rohit.verma.hr@infosys-demo.com",
+    "linkedin": "https://linkedin.com/in/rohit-verma-demo",
+    "location": "Hyderabad, India",
+    "hiring_domains": ["Java Developer", "Frontend Developer", "AI/ML Intern"],
+    "notes": "Usually asks for GitHub + project links."
+  },
+  {
+    "company": "Wipro",
+    "hr_name": "Sneha Nair",
+    "designation": "Senior Talent Partner",
+    "email": "sneha.nair.hr@wipro-demo.com",
+    "linkedin": "https://linkedin.com/in/sneha-nair-demo",
+    "location": "Pune, India",
+    "hiring_domains": ["Python Developer", "DevOps Engineer", "QA Engineer"],
+    "notes": "Prefers ATS-friendly resume format."
+  },
+  {
+    "company": "Accenture",
+    "hr_name": "Karan Mehta",
+    "designation": "Recruitment Consultant",
+    "email": "karan.mehta.hr@accenture-demo.com",
+    "linkedin": "https://linkedin.com/in/karan-mehta-demo",
+    "location": "Mumbai, India",
+    "hiring_domains": ["Business Analyst", "Full Stack Developer", "Cybersecurity"],
+    "notes": "Shortlists candidates with internships + certifications."
+  },
+  {
+    "company": "Deloitte",
+    "hr_name": "Priya Kulkarni",
+    "designation": "Campus Hiring Manager",
+    "email": "priya.kulkarni.hr@deloitte-demo.com",
+    "linkedin": "https://linkedin.com/in/priya-kulkarni-demo",
+    "location": "Gurgaon, India",
+    "hiring_domains": ["Data Analyst", "Consulting Intern", "PowerBI Developer"],
+    "notes": "Good for analytics + consulting roles."
+  },
+  {
+    "company": "KPMG",
+    "hr_name": "Amit Singh",
+    "designation": "Talent Acquisition Lead",
+    "email": "amit.singh.hr@kpmg-demo.com",
+    "linkedin": "https://linkedin.com/in/amit-singh-demo",
+    "location": "Delhi, India",
+    "hiring_domains": ["Risk Analyst", "Data Analyst", "Audit Associate"],
+    "notes": "Focus on communication + problem-solving."
+  },
+  {
+    "company": "PwC",
+    "hr_name": "Neha Joshi",
+    "designation": "HR Business Partner",
+    "email": "neha.joshi.hr@pwc-demo.com",
+    "linkedin": "https://linkedin.com/in/neha-joshi-demo",
+    "location": "Bangalore, India",
+    "hiring_domains": ["Data Analyst", "Finance Analyst", "Tech Consultant"],
+    "notes": "Prefers strong resume summary + achievements."
+  },
+  {
+    "company": "Cognizant",
+    "hr_name": "Vivek Reddy",
+    "designation": "Talent Acquisition Executive",
+    "email": "vivek.reddy.hr@cognizant-demo.com",
+    "linkedin": "https://linkedin.com/in/vivek-reddy-demo",
+    "location": "Chennai, India",
+    "hiring_domains": ["Software Engineer", "Python Developer", "Cloud Engineer"],
+    "notes": "Often hires for service-based projects."
+  },
+  {
+    "company": "Capgemini",
+    "hr_name": "Ishita Roy",
+    "designation": "Recruitment Partner",
+    "email": "ishita.roy.hr@capgemini-demo.com",
+    "linkedin": "https://linkedin.com/in/ishita-roy-demo",
+    "location": "Kolkata, India",
+    "hiring_domains": ["Frontend Developer", "Java Developer", "Automation QA"],
+    "notes": "Good for freshers with solid project work."
+  },
+  {
+    "company": "IBM",
+    "hr_name": "Siddharth Iyer",
+    "designation": "Talent Acquisition Specialist",
+    "email": "siddharth.iyer.hr@ibm-demo.com",
+    "linkedin": "https://linkedin.com/in/siddharth-iyer-demo",
+    "location": "Bangalore, India",
+    "hiring_domains": ["AI Engineer", "Cloud Engineer", "Backend Developer"],
+    "notes": "Strong preference for cloud + AI projects."
+  },
+  {
+    "company": "Microsoft",
+    "hr_name": "Riya Mukherjee",
+    "designation": "Recruiter",
+    "email": "riya.mukherjee.hr@microsoft-demo.com",
+    "linkedin": "https://linkedin.com/in/riya-mukherjee-demo",
+    "location": "Hyderabad, India",
+    "hiring_domains": ["SDE Intern", "Data Scientist Intern", "Product Intern"],
+    "notes": "Demo data for hackathon. Showcase premium tier use-case."
+  },
+  {
+    "company": "Amazon",
+    "hr_name": "Arjun Patel",
+    "designation": "Talent Acquisition",
+    "email": "arjun.patel.hr@amazon-demo.com",
+    "linkedin": "https://linkedin.com/in/arjun-patel-demo",
+    "location": "Bangalore, India",
+    "hiring_domains": ["SDE-1", "Support Engineer", "Data Engineer"],
+    "notes": "Often asks for DSA + system design basics."
+  },
+  {
+    "company": "Flipkart",
+    "hr_name": "Simran Kaur",
+    "designation": "HR Recruiter",
+    "email": "simran.kaur.hr@flipkart-demo.com",
+    "linkedin": "https://linkedin.com/in/simran-kaur-demo",
+    "location": "Bangalore, India",
+    "hiring_domains": ["SDE-1", "Frontend Engineer", "Business Analyst"],
+    "notes": "Great for e-commerce domain roles."
+  },
+  {
+    "company": "Zoho",
+    "hr_name": "Harish Kumar",
+    "designation": "Talent Acquisition Specialist",
+    "email": "harish.kumar.hr@zoho-demo.com",
+    "linkedin": "https://linkedin.com/in/harish-kumar-demo",
+    "location": "Chennai, India",
+    "hiring_domains": ["Software Developer", "QA Engineer", "Backend Developer"],
+    "notes": "Often conducts aptitude + coding round."
+  },
+  {
+    "company": "Paytm",
+    "hr_name": "Ayesha Khan",
+    "designation": "Recruiter",
+    "email": "ayesha.khan.hr@paytm-demo.com",
+    "linkedin": "https://linkedin.com/in/ayesha-khan-demo",
+    "location": "Noida, India",
+    "hiring_domains": ["Backend Developer", "Data Analyst", "Android Developer"],
+    "notes": "Good for fintech-focused roles."
+  }
+]

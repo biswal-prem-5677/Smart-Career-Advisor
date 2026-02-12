@@ -16,7 +16,7 @@ const CodeEditor = () => {
 
     const fetchProblems = async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/code/problems`);
+            const res = await axios.get(`/api/code/problems`);
             setProblems(res.data.problems);
             if (res.data.problems.length > 0) {
                 selectProblem(res.data.problems[0]);
@@ -36,12 +36,12 @@ const CodeEditor = () => {
         setIsRunning(true);
         setOutput(null);
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/code/evaluate`, {
+            const response = await axios.post(`/api/prep/coding/run`, {
                 code,
                 language,
                 problem_id: selectedProblem.id
             });
-            setOutput(res.data);
+            setOutput(response.data);
         } catch (err) {
             console.error(err);
             setOutput({ success: false, feedback: "Error connecting to server." });

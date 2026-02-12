@@ -1,15 +1,21 @@
-import streamlit as st
 import spacy
 from spacy.matcher import PhraseMatcher
 from skills import COMMON_SKILLS
 
-@st.cache_resource
+# Simple cache for the NLP model
+nlp_cache = None
+
 def load_nlp():
+    global nlp_cache
+    if nlp_cache is not None:
+        return nlp_cache
+        
     try:
         # First attempt: try to load the model directly
-        return spacy.load("en_core_web_sm")
+        nlp_cache = spacy.load("en_core_web_sm")
+        return nlp_cache
     except OSError as e:
-        st.warning("⚠️ spaCy model not found. Falling back to basic extraction.")
+        print("⚠️ spaCy model 'en_core_web_sm' not found. Falling back to basic extraction.")
         return None  # Explicitly return None if model is not available
 
 def extract_skills_ner(text):
@@ -48,4 +54,31 @@ def extract_name_ner(text):
                      return ent.text.strip().title()
         return "Candidate"
     except Exception:
+        return fallback_name_extraction(text)
+
+def fallback_name_extraction(text):
+    """Refined Regex/Heuristic extraction if NER fails."""
+    try:
+        import re
+        lines = text.split('\n')
+        # 1. Look for common headers
+        for line in lines[:20]:
+            if "name" in line.lower() and ":" in line:
+                parts = line.split(":")
+                if len(parts) > 1:
+                    candidate = parts[1].strip()
+                    if 3 < len(candidate) < 50:
+                        return candidate.title()
+                        
+        # 2. Look for the first capitalized words at the start (common in resumes)
+        # Skip lines that are likely contact info or headers
+        for line in lines[:10]:
+            line = line.strip()
+            if not line: continue
+            # Check if it looks like a name (2-3 words, titled)
+            if re.match(r"^[A-Z][a-z]+(\s[A-Z][a-z]+){1,2}$", line):
+                return line
+                
+        return "Candidate"
+    except:
         return "Candidate"

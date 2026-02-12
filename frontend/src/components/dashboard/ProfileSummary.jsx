@@ -1,10 +1,22 @@
 import React from 'react';
 import { User, MapPin, Briefcase, GraduationCap, Edit2 } from 'lucide-react';
 
-const ProfileSummary = ({ data }) => {
+const ProfileSummary = ({ data, user }) => {
     // Dynamic Name & Avatar Logic
-    const name = data?.candidate_name || "Candidate";
-    const initial = name.charAt(0).toUpperCase();
+    let name = data?.candidate_name;
+
+    if (!name || name === "Candidate") {
+        if (user && user.email) {
+            const emailName = user.email.split('@')[0];
+            name = emailName.split(/[._]/).map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+        } else {
+            name = "Candidate";
+        }
+    }
+
+    // Safety check for empty or invalid name
+    const safeName = name && name.length > 0 ? name : "Candidate";
+    const initial = safeName.charAt(0).toUpperCase();
     const skills = data?.skills?.resume?.slice(0, 5) || ['AI/ML', 'Python', 'Leadership']; // Show top 5 skills
 
     return (

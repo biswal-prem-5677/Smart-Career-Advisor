@@ -1,35 +1,53 @@
 #!/bin/bash
 
-echo "======================================="
-echo "   Smart Career Advisor Setup Script   "
-echo "======================================="
+# Colors
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
 
-# 1. Install Backend Dependencies
-echo "[1/4] Installing Python Dependencies..."
+echo -e "${CYAN}=======================================${NC}"
+echo -e "${CYAN}   Smart Career Advisor Setup Script   ${NC}"
+echo -e "${CYAN}=======================================${NC}"
+
+# 1. Virtual Environment
+if [ ! -d ".venv" ]; then
+    echo -e "${YELLOW}Creating virtual environment...${NC}"
+    python3 -m venv .venv
+fi
+source .venv/bin/activate
+
+# 2. Install Backend Dependencies
+echo -e "${YELLOW}[1/4] Installing Python Dependencies...${NC}"
+pip install --upgrade pip
 pip install -r requirements.txt
 
-# 2. Install Frontend Dependencies
-echo "[2/4] Installing Frontend Dependencies..."
+# 3. Install Frontend Dependencies
+echo -e "${YELLOW}[2/4] Installing Frontend Dependencies...${NC}"
 cd frontend
-npm install
+if [ ! -d "node_modules" ]; then
+    npm install
+else
+    echo "node_modules already exists, skipping."
+fi
 cd ..
 
-echo "---------------------------------------"
-echo "Setup Complete!"
-echo "---------------------------------------"
-echo "Starting Servers..."
+echo -e "${GREEN}---------------------------------------${NC}"
+echo -e "${GREEN}Setup Complete!${NC}"
+echo -e "${GREEN}---------------------------------------${NC}"
 
-# 3. Start Backend (in background)
-echo "[3/4] Starting Backend (FastAPI) on Port 8000..."
+# 4. Start Services
+echo -e "${CYAN}Starting Servers in side-by-side mode (if using screen/tmux) or standard...${NC}"
+
+echo -e "${YELLOW}[3/4] Starting Backend (FastAPI)...${NC}"
 uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload &
 BACKEND_PID=$!
 
-# 4. Start Frontend
-echo "[4/4] Starting Frontend (Vite)..."
+echo -e "${YELLOW}[4/4] Starting Frontend (Vite)...${NC}"
 cd frontend
 npm run dev
 
-# Cleanup function to kill backend when script exits
+# Cleanup
 trap "kill $BACKEND_PID" EXIT
 
 

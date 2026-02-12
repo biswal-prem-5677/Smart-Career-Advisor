@@ -46,38 +46,38 @@ const ModelPredictionHub = ({ onNavigate }) => {
     ];
 
     return (
-        <div className="space-y-8 animate-enter">
-            <div className="text-center space-y-4">
-                <h1 className="text-4xl font-bold text-slate-800">AI Prediction Models</h1>
-                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        <div className="space-y-12 animate-enter min-h-screen bg-slate-950 p-8 rounded-3xl">
+            <div className="text-center space-y-6">
+                <h1 className="text-4xl md:text-5xl font-black text-white">AI Prediction Models</h1>
+                <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
                     Leverage our suite of advanced machine learning models to gain insights into your career path, potential earnings, and skill gaps.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {models.map((model) => (
                     <button
                         key={model.id}
                         onClick={() => onNavigate(model.id)}
-                        className={`group relative p-6 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 text-left animate-enter ${model.delay} hover:-translate-y-1`}
+                        className={`group relative p-8 rounded-[2rem] bg-slate-900 border border-slate-800 shadow-xl hover:shadow-2xl hover:border-indigo-500/50 hover:bg-slate-800 transition-all duration-300 text-left animate-enter ${model.delay} hover:-translate-y-2 overflow-hidden`}
                     >
-                        <div className={`absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity`}>
-                            {React.cloneElement(model.icon, { size: 120, className: 'text-slate-900' })}
+                        <div className={`absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity`}>
+                            {React.cloneElement(model.icon, { size: 120, className: 'text-white' })}
                         </div>
 
-                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${model.color} flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${model.color} flex items-center justify-center shadow-lg mb-8 group-hover:scale-110 transition-transform duration-300`}>
                             {model.icon}
                         </div>
 
-                        <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-indigo-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
                             {model.title}
                         </h3>
-                        <p className="text-slate-600 mb-6 line-clamp-2">
+                        <p className="text-slate-400 mb-8 line-clamp-3 leading-relaxed text-base">
                             {model.description}
                         </p>
 
-                        <div className="flex items-center text-sm font-semibold text-slate-500 group-hover:text-indigo-600 transition-colors">
-                            Try Model <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        <div className="flex items-center text-sm font-bold text-slate-500 group-hover:text-white transition-colors uppercase tracking-wider">
+                            Try Model <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform text-indigo-500 group-hover:text-indigo-400" />
                         </div>
                     </button>
                 ))}

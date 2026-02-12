@@ -8,4 +8,21 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        secure: false,
+      }
+    },
+    watch: {
+      // Ignore certain file patterns to prevent excessive reloads
+      ignored: ['**/node_modules/**', '**/.git/**', '**/logs/**']
+    }
+  },
+  optimizeDeps: {
+    // Optimize dependencies to reduce file watching overhead
+    include: ['react', 'react-dom']
+  }
 })

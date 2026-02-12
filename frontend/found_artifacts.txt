@@ -1,0 +1,133 @@
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:160: return <Suspense fallback={<PageLoader />}><ModelPredictionHub onNavigate={(view) => setActiveView(view)} /></Suspense>;
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:166: return <Suspense fallback={<PageLoader />}><JobRolePrediction onBack={() => setActiveView('model-prediction-hub')} /></Suspense>;
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:169: return <Suspense fallback={<PageLoader />}><SalaryPrediction onBack={() => setActiveView('model-prediction-hub')} /></Suspense>;
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:172: return <Suspense fallback={<PageLoader />}><DomainFitPrediction onBack={() => setActiveView('model-prediction-hub')} /></Suspense>;
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:175: return <Suspense fallback={<PageLoader />}><SkillMatchPrediction onBack={() => setActiveView('model-prediction-hub')} /></Suspense>;
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:184: <Suspense fallback={<PageLoader />}><LandingPage onUploadFocus={() => document.getElementById('resume-upload')?.scrollIntoView({ behavior: 'smooth' })} /></Suspense>
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:323: <button onClick={() => setActiveView('about')} className={`hidden md:flex items-center gap-1 hover:text-indigo-400 transition-colors ${activeView === 'about' ? 'text-indigo-400 font-bold' : ''}`}>
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:326: <button onClick={() => setActiveView('help')} className={`hidden md:flex items-center gap-1 hover:text-indigo-400 transition-colors ${activeView === 'help' ? 'text-indigo-400 font-bold' : ''}`}>
+c:\next mind\Smart-Career-Advisor\frontend\src\App.jsx:342: {renderContent()}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\AIPipelineViz.jsx:40: })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\AIRecommendations.jsx:59: onClick={() => handleTabChange(tab.id)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\AIRecommendations.jsx:69: })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\AIRecommendations.jsx:110: <span className="text-xs text-slate-400 font-medium">Week {Math.ceil((index + 1) / 2)}</span>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\ChatBot.jsx:166: onClick={() => setIsOpen(false)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\ChatBot.jsx:283: onChange={(e) => setInputValue(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\ChatBot.jsx:304: onClick={() => setIsOpen(!isOpen)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\FileUpload.jsx:33: onDragLeave={() => setActiveDrag(null)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\FileUpload.jsx:34: onDrop={(e) => handleDrop(e, type)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\FileUpload.jsx:36: <input type="file" id={type} className="hidden" accept=".pdf,.docx,.txt" onChange={(e) => handleFileChange(e, type)} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\Footer.jsx:36: <li><button onClick={() => onNavigate('home')} className="hover:text-indigo-400 transition-colors text-left">Home</button></li>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\Footer.jsx:40: <li><button onClick={() => onNavigate('help')} className="hover:text-indigo-400 transition-colors text-left">Help & Support</button></li>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\SkillAnalysis.jsx:79: <span className="text-3xl font-bold text-slate-800 block">{Math.round(analysis.match_score)}%</span>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\UserProfile.jsx:34: onClick={() => setIsOpen(!isOpen)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\UserProfile.jsx:69: onClick={() => setShowSettings(true)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\UserProfile.jsx:88: onClick={() => setShowSettings(false)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\dashboard\IndustryMatch.jsx:25: className={`h-full rounded-full ${ind.color.split(' ')[0].replace('bg-', 'bg-opacity-100 bg-')}`}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CareerRoadmap.jsx:50: onChange={(e) => setDomain(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CareerRoadmap.jsx:51: onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CodeEditor.jsx:68: onClick={() => selectProblem(prob)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CodeEditor.jsx:131: onChange={(e) => setCode(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CompanyPreparation.jsx:64: onClick={() => setCompanyType('Product')}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CompanyPreparation.jsx:70: onClick={() => setCompanyType('Service')}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CompanyPreparation.jsx:83: onChange={(e) => setCompanyName(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CompanyPreparation.jsx:84: onKeyDown={(e) => e.key === 'Enter' && fetchPlan()}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\CompanyPreparation.jsx:91: disabled={loading || !companyName.trim()}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:76: <input type="number" required value={formData.Age} onChange={(e) => setFormData({ ...formData, Age: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:81: <input type="number" step="0.1" required value={formData.Academic_Performance} onChange={(e) => setFormData({ ...formData, Academic_Performance: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:89: <select value={formData.Gender} onChange={(e) => setFormData({ ...formData, Gender: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:98: <select value={formData.Vocational_Program} onChange={(e) => setFormData({ ...formData, Vocational_Program: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:109: <input type="number" required value={formData.Certifications_Count} onChange={(e) => setFormData({ ...formData, Certifications_Count: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:114: <input type="number" required value={formData.Internship_Experience} onChange={(e) => setFormData({ ...formData, Internship_Experience: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\DomainFitPrediction.jsx:182: {(result.confidence * 100).toFixed(0)}% Match Confidence
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HelpPage.jsx:141: onClick={() => toggleFaq(idx)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:140: onChange={(e) => setCompanyName(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:215: onChange={(e) => setUserName(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:226: onChange={(e) => setTargetRole(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:237: onChange={(e) => setUserSkills(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:248: onChange={(e) => setUserProjects(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\HREmailGenerator.jsx:258: onChange={(e) => setResumeText(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\InterviewRoadmap.jsx:61: onChange={(e) => setRole(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\InterviewRoadmap.jsx:72: onChange={(e) => setTimeFrame(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:272: onChange={(e) => setTargetRole(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:308: onClick={() => handleStartRound(stage)} // Allow clicking card too if active
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:333: {loadingQuestion ? <Loader className="animate-spin" size={18} /> : (stage.action || "Start Round")} {!loadingQuestion && <ArrowRight size={18} />}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:377: <button onClick={() => setShowModal(false)} className="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white bg-slate-800 border border-slate-700 rounded-lg hover:border-slate-600 transition-all">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:518: <button disabled={analyzing} onClick={() => setRecording(true)} className="p-4 bg-red-600 text-white rounded-full hover:bg-red-500 hover:scale-110 transition-all shadow-lg disabled:opacity-50">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:547: onChange={(e) => setCodingSolution(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:554: <button key={idx} onClick={() => handleAnswerRound(opt)} className="w-full text-left p-4 rounded-xl border-2 border-slate-700 hover:border-blue-500 hover:bg-slate-800 transition-all group flex items-center gap-3">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobPreparation.jsx:556: {String.fromCharCode(65 + idx)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:90: <select value={formData.gender} onChange={(e) => setFormData({ ...formData, gender: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:97: <select value={formData.workex} onChange={(e) => setFormData({ ...formData, workex: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:108: <input type="number" step="0.1" required value={formData.ssc_p} onChange={(e) => setFormData({ ...formData, ssc_p: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 85" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:112: <input type="number" step="0.1" required value={formData.hsc_p} onChange={(e) => setFormData({ ...formData, hsc_p: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 88" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:116: <select value={formData.hsc_s} onChange={(e) => setFormData({ ...formData, hsc_s: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:128: <input type="number" step="0.1" required value={formData.degree_p} onChange={(e) => setFormData({ ...formData, degree_p: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 75" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:132: <input type="number" step="0.1" required value={formData.mba_p} onChange={(e) => setFormData({ ...formData, mba_p: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 70" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:136: <input type="number" step="0.1" required value={formData.etest_p} onChange={(e) => setFormData({ ...formData, etest_p: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-purple-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 80" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:140: <select value={formData.specialisation} onChange={(e) => setFormData({ ...formData, specialisation: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobRolePrediction.jsx:173: <CheckCircle size={14} /> {(result.Confidence * 100).toFixed(0)}% Match Confidence
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobsPage.jsx:65: onChange={(e) => setSearchQuery(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobsPage.jsx:76: onClick={() => setSelectedDomain(domain)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobsPage.jsx:160: onClick={() => setSelectedJob(null)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\JobsPage.jsx:210: <span className="mt-1">{step.replace(/^\d+\.\s*/, '')}</span>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LandingPage.jsx:128: onClick={() => setSelectedFeature(null)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LandingPage.jsx:149: onClick={() => setSelectedFeature(null)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LandingPage.jsx:282: onClick={() => setSelectedFeature(feat)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LanguageDiff.jsx:99: onChange={(e) => setLang1(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LanguageDiff.jsx:102: {LANGUAGES.map(l => <option key={l.id} value={l.id}>{l.icon} &nbsp; {l.name}</option>)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LanguageDiff.jsx:119: onChange={(e) => setLang2(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LanguageDiff.jsx:122: {LANGUAGES.map(l => <option key={l.id} value={l.id}>{l.icon} &nbsp; {l.name}</option>)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:103: onChange={(e) => setEmail(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:120: onChange={(e) => setOtp(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:127: <button type="button" onClick={() => setStep(1)} className="w-full text-indigo-300 text-sm hover:text-white">Back</button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:139: onChange={(e) => setNewPassword(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:147: onChange={(e) => setConfirmPassword(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:345: <button onClick={() => setIsSignUp(false)} className={`flex-1 py-2 text-sm font-medium rounded-lg relative z-10 transition-colors ${!isSignUp ? 'text-white' : 'text-indigo-200 hover:text-white'}`}>Sign In</button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:346: <button onClick={() => setIsSignUp(true)} className={`flex-1 py-2 text-sm font-medium rounded-lg relative z-10 transition-colors ${isSignUp ? 'text-white' : 'text-indigo-200 hover:text-white'}`}>Sign Up</button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:360: onChange={(e) => setEmail(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:390: onChange={e => handleOtpChange(e.target, index)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:407: <button onClick={() => setStep('email')} className="w-full text-indigo-300 text-sm hover:text-white">Back to Email</button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:425: onChange={(e) => setPassword(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:429: <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-1/2 -translate-y-1/2 text-indigo-300 hover:text-white transition-colors">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:442: onChange={(e) => setConfirmPassword(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:451: <button type="button" onClick={() => setShowForgotModal(true)} className="text-xs text-indigo-300 hover:text-white transition-colors">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:462: {isLoading ? 'Processing...' : (isSignUp ? 'Create Account' : 'Login')} <ArrowRight size={20} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:464: <button type="button" onClick={() => setStep('email')} className="w-full text-indigo-300 text-sm hover:text-white">Back</button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\LoginPage.jsx:477: {showForgotModal && <ForgotPasswordModal onClose={() => setShowForgotModal(false)} />}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ModelPredictionHub.jsx:61: onClick={() => onNavigate(model.id)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ModelPredictionHub.jsx:65: {React.cloneElement(model.icon, { size: 120, className: 'text-white' })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\PlacementPrediction.jsx:45: {options.map(opt => <option key={opt} value={opt} className="bg-slate-900 text-white">{opt}</option>)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\PlacementPrediction.jsx:250: {(result.probability * 100).toFixed(1)}% Probability
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\PlacementPrediction.jsx:287: {result.recommendations?.reasons?.map((r, i) => <li key={i}>{r}</li>)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ReportCard.jsx:47: doc.text(`Generated: ${new Date().toLocaleDateString()}`, 105, 30, { align: 'center' });
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ReportCard.jsx:192: <circle cx="128" cy="128" r="120" stroke="currentColor" strokeWidth="16" fill="transparent" strokeDasharray={2 * Math.PI * 120} strokeDashoffset={2 * Math.PI * 120 * (1 - (analysis?.readiness_score || percentage) / 100)} className="text-violet-500 transition-all duration-1000 ease-out" strokeLinecap="round" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ReportCard.jsx:197: {analysis?.status_label || (percentage === 100 ? "Ready" : "Analyzing...")}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ReportCard.jsx:215: onClick={() => setShowModuleDetails(!showModuleDetails)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ReportCard.jsx:325: })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:94: summary: `Professional with experience in: ${Object.values(answers).join('. ')}`,
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:153: <div class="item">Professional with experience in: ${Object.values(answers).join('. ')}</div>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:161: ${Object.values(answers).join('<br>')}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:280: onChange={(e) => setJdText(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:309: <input type="text" placeholder="Full Name" className="p-3 border border-slate-700 rounded-xl bg-slate-950 text-white placeholder-slate-600 outline-none focus:border-indigo-500" value={personalInfo.name} onChange={e => setPersonalInfo({ ...personalInfo, name: e.target.value })} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:310: <input type="email" placeholder="Email" className="p-3 border border-slate-700 rounded-xl bg-slate-950 text-white placeholder-slate-600 outline-none focus:border-indigo-500" value={personalInfo.email} onChange={e => setPersonalInfo({ ...personalInfo, email: e.target.value })} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:311: <input type="text" placeholder="Phone" className="p-3 border border-slate-700 rounded-xl bg-slate-950 text-white placeholder-slate-600 outline-none focus:border-indigo-500" value={personalInfo.phone} onChange={e => setPersonalInfo({ ...personalInfo, phone: e.target.value })} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:312: <input type="text" placeholder="Location" className="p-3 border border-slate-700 rounded-xl bg-slate-950 text-white placeholder-slate-600 outline-none focus:border-indigo-500" value={personalInfo.location} onChange={e => setPersonalInfo({ ...personalInfo, location: e.target.value })} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:313: <input type="text" placeholder="LinkedIn URL (Optional)" className="p-3 border border-slate-700 rounded-xl md:col-span-2 bg-slate-950 text-white placeholder-slate-600 outline-none focus:border-indigo-500" value={personalInfo.linkedin} onChange={e => setPersonalInfo({ ...personalInfo, linkedin: e.target.value })} />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:346: onChange={(e) => setAnswers({ ...answers, [idx]: e.target.value })}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:358: onChange={(e) => setSkillsKey(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:390: <button onClick={() => setAnalysisResult(null)} className="p-2 hover:bg-slate-800 rounded-full text-slate-400 hover:text-white"><X size={24} /></button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:443: onChange={(e) => setTargetCompany(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\ResumeBuilder.jsx:478: onClick={() => setStep(1)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:73: <input type="number" required value={formData.age} onChange={(e) => setFormData({ ...formData, age: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-emerald-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 25" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:77: <select value={formData.gender} onChange={(e) => setFormData({ ...formData, gender: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:88: <select value={formData.job_title} onChange={(e) => setFormData({ ...formData, job_title: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-emerald-500/20 text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:98: <input type="number" step="0.5" required value={formData.experience} onChange={(e) => setFormData({ ...formData, experience: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none focus:ring-2 focus:ring-emerald-500/20 text-sm text-slate-200 placeholder-slate-500" placeholder="e.g. 3.5" />
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:102: <select value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-600 bg-slate-700/50 outline-none text-sm text-slate-200">
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:135: <h1 className="text-4xl md:text-5xl font-bold">₹{result.min_salary?.toLocaleString()}</h1>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:137: <h1 className="text-4xl md:text-5xl font-bold">₹{result.max_salary?.toLocaleString()}</h1>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SalaryPrediction.jsx:143: Base: ₹{result.predicted_salary?.toLocaleString()}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SkillMatchPrediction.jsx:76: onChange={(e) => setTargetRole(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SkillMatchPrediction.jsx:93: onChange={(e) => setNewSkill(e.target.value)}
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SkillMatchPrediction.jsx:106: <button onClick={() => removeSkill(skill)} className="text-slate-200 hover:text-red-300"><X size={14} /></button>
+c:\next mind\Smart-Career-Advisor\frontend\src\components\pages\SkillMatchPrediction.jsx:181: <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-xs font-bold">{skill.substring(0, 2).toUpperCase()}</div>

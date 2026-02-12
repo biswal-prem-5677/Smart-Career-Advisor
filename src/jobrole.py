@@ -41,3 +41,5 @@ async def predict_role(data: JobInput):
         "prediction": pred[0],
         "probabilities": proba
     }
+
+

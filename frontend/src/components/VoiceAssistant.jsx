@@ -54,7 +54,7 @@ const VoiceAssistant = () => {
             setIsLoading(true);
             try {
                 // 1. Get Access Token from our Backend
-                const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/create-web-call`);
+                const response = await axios.post(`/api/create-web-call`);
                 const accessToken = response.data.access_token;
 
                 // 2. Start Call with Retell SDK
